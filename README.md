@@ -98,3 +98,68 @@ Interactive Application Security Testing (IAST): Tests from inside the applicati
 - Optimize performance
 - Maintain documentation
 - Release updates
+
+**How do you implement security in a CI/CD pipeline?**
+
+Security is implemented by:
+
+Using SAST and SCA scans during build
+
+Using secrets vaults, not storing secrets in code
+
+Enforcing branch protection, MFA, and signed commits
+
+Scanning IaC templates (Terraform, Kubernetes, CloudFormation)
+
+Scanning container images before pushing
+
+Enforcing policy gates (fail build on high vulnerabilities)
+
+Running DAST in staging
+
+Implementing runtime monitoring and artifact signing
+
+**What tools can be used for CI/CD security?**
+
+
+SAST: SonarQube
+
+SCA: Snyk
+
+Secrets Scanning: GitLeaks
+
+Container Scanning: Anchore, Clair
+
+IaC Scanning: Checkov, Terrascan
+
+DAST: OWASP ZAP, Burp Suite
+
+Secrets Vault: HashiCorp Vault, AWS Secrets Manager
+
+**How do you secure container builds in CI/CD?**
+
+Use minimal base images
+
+Scan images for vulnerabilities before pushing
+
+Disallow running containers as root
+
+Sign images before deployment
+
+Use policy engines (Kyverno) to enforce rules
+
+**What is "shift-left security"?**
+
+Shift-left security means detecting and fixing issues earlier in the development cycle rather than waiting until deployment.
+
+**How do you ensure secure deployments?**
+
+Use signed and verified artifacts
+
+Implement RBAC for deployment environments
+
+Use infrastructure automation (IaC) with scanning
+
+Disable manual deployments
+
+Encrypt data in transit and at rest
