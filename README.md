@@ -128,7 +128,7 @@ SCA: Snyk
 
 Secrets Scanning: GitLeaks
 
-Container Scanning: Anchore, Clair
+Container Scanning: Trivy
 
 IaC Scanning: Checkov, Terrascan
 
