@@ -163,3 +163,36 @@ Use infrastructure automation (IaC) with scanning
 Disable manual deployments
 
 Encrypt data in transit and at rest
+
+A **DDoS (Distributed Denial of Service)** attack is when someone tries to knock a website offline by flooding it with so much traffic that it can't handle real users anymore.
+
+Think of it like:
+
+A store where thousands of fake customers rush in at once,
+making it impossible for real customers to get inside.
+
+A **SQL injection** is when a hacker tricks a website into running harmful commands on its database by sneaking malicious code into a login form or search box.
+
+Let's say a login form has this logic:
+```
+username: admin
+password: password123
+```
+
+The website runs a command like:
+```
+SELECT * FROM users WHERE username = 'admin' AND password = 'password123'
+```
+
+But if a hacker enters:
+```
+username: admin' OR '1'='1
+password: anything
+```
+
+The command becomes:
+```
+SELECT * FROM users WHERE username = 'admin' OR '1'='1' AND password = 'anything'
+```
+
+Since `'1'='1'` is always true, the database returns every user account! The hacker bypasses the login.
